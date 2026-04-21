@@ -65,6 +65,6 @@ as a crude perf sanity check (real grading uses `csdb` cycle counts).
 
 ## Questions
 
-Email `<hiring-manager>@cerebras.net` — we answer within 4 hours on
+Email `Daniel.kim@cerebras.net` and `Kevin.taylor@cerebras.net` — we answer within 4 hours on
 business days. Questions about clarifying the spec are fine; questions
 about how to write CSL are not (that's what the SDK tutorials are for).
