@@ -10,10 +10,14 @@ ENV DEBIAN_FRONTEND=noninteractive TZ=UTC
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
       software-properties-common ca-certificates curl gnupg \
-      python3 python3-pip \
+      python3 python3-pip tzdata \
     && add-apt-repository -y ppa:apptainer/ppa \
     && apt-get update && apt-get install -y --no-install-recommends apptainer \
     && rm -rf /var/lib/apt/lists/*
+
+# Apptainer bind-mounts /etc/localtime from the Docker container into the SIF
+# at launch; the minimal Ubuntu image doesn't create it even with TZ set.
+RUN ln -sf /usr/share/zoneinfo/UTC /etc/localtime
 
 # The SDK wrappers (cslc, cs_python, sdk_debug_shell) invoke `singularity exec`
 # directly. Apptainer is CLI-compatible, so a symlink is enough.

@@ -24,9 +24,19 @@ is the onramp.
 
 SDK download: [Cerebras-SDK-1.4.0](http://dropbox.com/scl/fi/2lgy7q7rwg366wf9m9r1l/Cerebras-SDK-1.4.0-202505230211-4-d9070058.tar.gz?dl=0&e=1&rlkey=fk8egs6dop9n3prrgnmz5ji6u&st=8681pzzf)
 
-The SDK runs only on Linux with Apptainer (or Singularity) installed. On
-Mac or Windows, build the Docker image in `docker/` and work inside it
-— see `docker/README.md`.
+The SDK runs only on Linux with Apptainer (or Singularity). Three ways
+to get that environment:
+
+- **Linux + Apptainer/Singularity** — native, fastest.
+- **Mac or Windows + Docker** — build the image in `docker/` and work
+  inside it locally. See `docker/README.md`.
+- **Cloud Linux VM on Render** — sign up at render.com and redeem promo
+  code `RENDER-CODETV` for $50 in free credits, which covers well over
+  the 72-hour window on a small instance. Then install Apptainer and
+  follow the Linux path.
+
+If none of those work, ping your contact and a hosted VM will be
+arranged.
 
 ```bash
 # 1. Toolchain check
