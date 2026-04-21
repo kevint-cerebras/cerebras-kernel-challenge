@@ -92,6 +92,10 @@ grading.
   reference).
 - **DESIGN.md**: specific, honest, and short. Diagrams beat paragraphs.
 
+## Submission
+
+Invite {your username} + `danielkim-cerebras` to your solution repo and send an email to us with the private github repo to submit.
+
 ## Questions
 
 Email `Daniel.kim@cerebras.net` and `Kevin.taylor@cerebras.net` — we
