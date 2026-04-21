@@ -24,6 +24,10 @@ is the onramp.
 
 SDK download: [Cerebras-SDK-1.4.0](http://dropbox.com/scl/fi/2lgy7q7rwg366wf9m9r1l/Cerebras-SDK-1.4.0-202505230211-4-d9070058.tar.gz?dl=0&e=1&rlkey=fk8egs6dop9n3prrgnmz5ji6u&st=8681pzzf)
 
+The SDK runs only on Linux with Apptainer (or Singularity) installed. On
+Mac or Windows, build the Docker image in `docker/` and work inside it
+— see `docker/README.md`.
+
 ```bash
 # 1. Toolchain check
 cslc --help
