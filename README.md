@@ -88,8 +88,10 @@ grading.
   `allclose` within 1e-3. `all_equal` and `duplicates` are the
   tie-breaking tests. Don't skip them.
 - **Determinism**: run twice, same output.
-- **Perf**: within the cycle budget in SPEC §2.5 (set at `1.3×` our
-  reference).
+- **Perf**: per-case cycle gate in SPEC §2.5 (1.3× our reference, per
+  test case). Reference counts live in `cycles.json`; entries currently
+  set to `null` are waived for your submission with no retroactive
+  enforcement.
 - **DESIGN.md**: specific, honest, and short. Diagrams beat paragraphs.
 
 ## Submission
