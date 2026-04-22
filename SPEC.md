@@ -41,7 +41,7 @@ Implement a kernel that computes the **top-K nearest neighbors** (by L2 distance
    - All-equal rows (tie-breaking test)
    - Rows with exact duplicates at different indices
 4. Deterministic output (run twice, bit-identical result).
-5. **Performance budget**: ≤ `X` cycles for the baseline workload, where `X` is set to `1.3 × staff_engineer_reference` and communicated with the challenge packet. Exceeding the budget = fail.
+5. **Performance budget**: For each of the 6 test cases, your kernel must satisfy `candidate_cycles ≤ 1.3 × reference_cycles`, measured by `csdb`. Per-case reference cycle counts live in `cycles.json` at the packet root and are authoritative — the grader reads them directly. If an entry is `null`, the gate is waived for that case for the duration of your submission; there is no retroactive enforcement once the reference is published. Failing the gate on a case loses that case's share of the perf points (see §4); it does not fail your submission overall.
 
 ### Soft constraints (graded qualitatively)
 6. Memory footprint per PE should fit comfortably — no swapping to host between phases.
@@ -76,7 +76,7 @@ submission/
 | Correctness — baseline | 25 | Matches NumPy top-K exactly |
 | Correctness — edge cases | 25 | All 5 edge cases pass |
 | Determinism | 10 | Bit-identical across 3 runs |
-| Performance — within budget | 20 | `csdb` cycle count ≤ budget |
+| Performance — within budget | 20 | `csdb` cycles ≤ 1.3× reference per case (see `cycles.json`). Awarded proportionally across the 6 cases; cases with a `null` reference count as pass. |
 | Design memo quality | 15 | See §5 |
 | Code clarity | 5 | Readable, commented where non-obvious |
 
