@@ -106,5 +106,5 @@ Invite `kevint-cerebras` + `danielkim-cerebras` to your solution repo and send a
 ## Questions
 
 Email `Daniel.kim@cerebras.net` and `Kevin.taylor@cerebras.net` — we
-answer within 4 hours on business days. Spec clarifications: fine.
+answer within 24 hours on business days. Spec clarifications: fine.
 "How do I write CSL": that's what the tutorials are for.
