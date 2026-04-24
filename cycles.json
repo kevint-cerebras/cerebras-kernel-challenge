@@ -1,0 +1,14 @@
+{
+  "_note": "Per-case reference cycle counts from csdb on the staff DSD-based reference kernel. SDK 1.4.0, WSE-2 simulator. Gate: candidate_cycles <= multiplier * reference_cycles. null = gate waived for that case until populated.",
+  "_status": "provisional — staff DSD reference not yet measured. Numbers land when the open task in the staff README clears. No retroactive enforcement.",
+  "_key_convention": "Keys match CASE_PARAMS in tests/test_correctness.py (snake_case), NOT the display names in reference.py ALL_CASES. Keep these in sync with the grader.",
+  "multiplier": 1.3,
+  "reference_cycles": {
+    "baseline":   null,
+    "k_eq_1":     null,
+    "k_large":    null,
+    "uneven":     null,
+    "all_equal":  null,
+    "duplicates": null
+  }
+}
