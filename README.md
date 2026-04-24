@@ -22,7 +22,10 @@ is the onramp.
 
 ## Before you write any CSL (≈30 min)
 
-SDK download: [Cerebras-SDK-1.4.0](http://dropbox.com/scl/fi/2lgy7q7rwg366wf9m9r1l/Cerebras-SDK-1.4.0-202505230211-4-d9070058.tar.gz?dl=0&e=1&rlkey=fk8egs6dop9n3prrgnmz5ji6u&st=8681pzzf)
+SDK download: [Cerebras-SDK-2.0.0](https://www.cerebras.ai/developers/sdk-request)
+You will get the link to download the SDK immediately after you complete the form. If you do not get the sdk, reach out to us!
+
+Documentation: https://sdk.cerebras.net/
 
 The SDK runs only on Linux with Apptainer (or Singularity). Three ways
 to get that environment:
