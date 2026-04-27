@@ -40,9 +40,6 @@ to get that environment:
   the 72-hour window on a small instance. Then install Apptainer and
   follow the Linux path.
 
-If none of those work, ping your contact and a hosted VM will be
-arranged.
-
 ```bash
 # 1. Toolchain check
 cslc --help
