@@ -22,7 +22,7 @@ Implement a kernel that computes the **top-K nearest neighbors** (by L2 distance
 - `distances`: `fp32`, shape `(K,)` — the corresponding L2 distances, sorted ascending
 
 ### Semantics
-- Distance metric is **Euclidean** (L2). You may return squared distances if you prefer, as long as ordering is identical — document your choice.
+- Distance metric is **Euclidean** (L2). **Return squared L2 distances** (`||x − q||²`). The NumPy oracle in `reference.py` returns squared distances and the grader's `allclose` (atol=1e-3, rtol=1e-3) compares against them; returning Euclidean (sqrt-applied) distances will fail the tolerance check at any non-trivial scale.
 - `indices[0]` must be the globally-nearest row.
 - **Tie-breaking is required and deterministic**: if two rows have equal distance, the row with the smaller original index in `D` comes first.
 - Output must be identical across runs (no nondeterminism from fabric arrival order).
@@ -51,21 +51,20 @@ Implement a kernel that computes the **top-K nearest neighbors** (by L2 distance
 
 ## 3. Deliverables
 
-Submit a zip/tarball containing:
+Submit by inviting `kevint-cerebras` and `danielkim-cerebras` as collaborators on your **private** solution GitHub repo, then email both contacts with the repo link.
+
+**Layout requirement:** `layout.csl` and `run.py` must be in the same directory at the level you point the grader at. `tests/test_correctness.py` is invoked with `--submission=<dir>` and asserts both files exist directly in `<dir>`. Recommended flat layout:
 
 ```
-submission/
-├── src/
-│   ├── layout.csl
-│   ├── pe_program.csl        # or multiple, your choice
-│   └── (any supporting files)
-├── run.py                    # host code: memcpy D, q, read back indices/distances
-├── tests/
-│   └── test_correctness.py   # runs all edge cases, compares to NumPy reference
-├── commands.sh               # cslc + run invocation for WSE-2
-├── DESIGN.md                 # 1-page design memo (see §5)
-└── README.md                 # how to build and run
+<your-repo>/
+├── layout.csl                # required at this level
+├── pe_program.csl            # or multiple PE program files
+├── run.py                    # required at this level — host: memcpy D + q, launch, readback
+├── commands.sh               # cslc + cs_python invocation for the baseline
+└── DESIGN.md                 # 1-page design memo (see §5)
 ```
+
+You do not need to re-vendor `reference.py`, `tests/`, or this `SPEC.md` — the grader brings its own copy. If you place CSL files under a subdirectory like `src/`, point the grader at that subdirectory and put `run.py` there too.
 
 ---
 

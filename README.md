@@ -93,10 +93,12 @@ grading.
   `allclose` within 1e-3. `all_equal` and `duplicates` are the
   tie-breaking tests. Don't skip them.
 - **Determinism**: run twice, same output.
-- **Perf**: per-case cycle gate in SPEC §2.5 (1.3× our reference, per
-  test case). Reference counts live in `cycles.json`; entries currently
-  set to `null` are waived for your submission with no retroactive
-  enforcement.
+- **Perf**: per-case cycle gate in SPEC §2.5 (1.3× our staff reference,
+  per test case). Reference counts live in `cycles.json`. **All entries
+  are currently `null` — the perf gate is fully waived for this
+  packet.** You get full perf credit if correctness passes. No
+  retroactive enforcement when real numbers land. Optimize visibly
+  anyway; perf reasoning is part of the DESIGN.md (15 pts) score.
 - **DESIGN.md**: specific, honest, and short. Diagrams beat paragraphs.
 
 ## Submission
