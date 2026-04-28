@@ -29,7 +29,7 @@ You will get the link to download the SDK immediately after you complete the for
 
 Documentation: https://sdk.cerebras.net/
 
-The SDK runs only on Linux with Apptainer (or Singularity). Three ways
+The SDK runs only on Linux with Apptainer (or Singularity). Four ways
 to get that environment:
 
 - **Linux + Apptainer/Singularity** — native, fastest.
@@ -39,6 +39,14 @@ to get that environment:
   code `RENDER-CODETV` for $50 in free credits, which covers well over
   the 72-hour window on a small instance. Then install Apptainer and
   follow the Linux path.
+- **GitHub Codespaces** — create a Codespace
+  on a *private* cloned repo. Download the SDK tarball
+  from the Dropbox link, change `dl=0` to
+  `dl=1` and run `wget "YOUR_LINK?dl=1" -O sdk.tar.gz`, then extract with
+  `tar -xzf sdk.tar.gz -C sdk`. Install Apptainer via
+  `sudo add-apt-repository -y ppa:apptainer/ppa && sudo apt-get install -y apptainer`,
+  then symlink it: `sudo ln -sf /usr/bin/apptainer /usr/bin/singularity`.
+  Run `./sdk/cslc --version` to confirm. 
 
 ```bash
 # 1. Toolchain check
