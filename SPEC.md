@@ -1,6 +1,6 @@
 # Cerebras Kernel Challenge: Wafer-Scale Top-K k-NN
 
-**Role fit:** kernel / HPC / ML-systems engineer
+**Role fit:** AI engineer
 **Expected effort:** 1–3 days for a strong candidate
 **Tools allowed:** any AI assistant, any documentation, any reference code
 **What we're testing:** can you design, debug, and profile a non-trivial CSL kernel — not whether you memorized CSL syntax
