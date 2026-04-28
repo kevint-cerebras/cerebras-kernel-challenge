@@ -77,6 +77,8 @@ Everything from `src-starter/` plus:
   memos because they understood the output. Candidates who pasted
   without understanding cannot. Understand your code!
 
+While there is no performance minimum, we will stack rank all correct submissions from least to most performant and invite the top 10 candidates to interview. Make it as efficient as you can - cycles matter even though the gate is waived.
+
 ## Running the grader locally
 
 ```bash
