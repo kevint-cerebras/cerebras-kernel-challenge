@@ -110,7 +110,7 @@ grading.
 
 ## Submission
 
-Invite `kevint-cerebras` + `danielkim-cerebras` to your solution repo and send an email to us with the private github repo link to submit.
+Invite `kevint-cerebras` + `danielkim-cerebras` to your solution repo and [fill out this form.](https://forms.gle/c3Z7ngwSux4nSx4i6)
 
 ## Questions
 
