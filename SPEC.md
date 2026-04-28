@@ -51,7 +51,7 @@ Implement a kernel that computes the **top-K nearest neighbors** (by L2 distance
 
 ## 3. Deliverables
 
-Submit by inviting `kevint-cerebras` and `danielkim-cerebras` as collaborators on your **private** solution GitHub repo, then email both contacts with the repo link.
+Submit by inviting `kevint-cerebras` and `danielkim-cerebras` as collaborators on your **private** solution GitHub repo, then [fill out this form.](https://docs.google.com/forms/d/e/1FAIpQLSeUu1MizykGlQ_Jb0Qa4icNOMM3bwC6OtKGXmSZUjJlI8FPow/viewform)
 
 **Layout requirement:** `layout.csl` and `run.py` must be in the same directory at the level you point the grader at. `tests/test_correctness.py` is invoked with `--submission=<dir>` and asserts both files exist directly in `<dir>`. Recommended flat layout:
 
